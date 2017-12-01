@@ -50,7 +50,7 @@ platform :ios do
   export LANG=en_US.UTF-8
 branch = options[:branch]
 
-puts "开始打development ipa"
+puts "start development ipa"
 
 updateProjectBuildNumber #更改项目build号
 
