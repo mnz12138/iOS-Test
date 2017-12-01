@@ -46,6 +46,7 @@ scheme="iOS-Test"
 
 platform :ios do
   lane :development_build do|options|
+  export LANG=en_US.UTF-8
 branch = options[:branch]
 
 puts "开始打development ipa"
