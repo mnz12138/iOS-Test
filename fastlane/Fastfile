@@ -47,6 +47,8 @@ scheme="iOS-Test"
 platform :ios do
   lane :development_build do|options|
 branch = options[:branch]
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
 
 puts "start development ipa"
 
