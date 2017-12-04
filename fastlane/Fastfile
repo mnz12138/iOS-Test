@@ -55,7 +55,8 @@ updateProjectBuildNumber
 
 gym(
 
-output_name:"#{scheme}_#{get_build_number()}",
+# output_name:"#{scheme}_#{get_build_number()}",
+# output_name:"#{scheme}}",
 
 clean:true,
 
@@ -64,7 +65,11 @@ configuration:"Debug",
 export_method:"development",
 
 output_directory:"./fastlane/build",
-)  end
+)  
+
+sh "fir publish ./build/#{scheme}.ipa -T 59992c566b27ce19c9a63d2680c23880"
+
+end
 end
 
 
