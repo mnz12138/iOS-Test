@@ -5,12 +5,42 @@
     
     
       
-      <testcase classname="fastlane.lanes" name="0: Verifying required fastlane version" time="0.009163">
+      <testcase classname="fastlane.lanes" name="0: Verifying required fastlane version" time="0.014982">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="1: default_platform" time="0.002199">
+      <testcase classname="fastlane.lanes" name="1: default_platform" time="0.003257">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="2: get_build_number" time="5.804768">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="3: increment_build_number" time="2.878113">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="4: get_build_number" time="1.266623">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="5: gym" time="18.646059">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="6: get_build_number" time="0.919008">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="7: fir publish ./build/iOS-Test_20171205.01.ipa -T 59992c566b27ce19c9a63d2680c23880" time="5.173992">
         
       </testcase>
     
