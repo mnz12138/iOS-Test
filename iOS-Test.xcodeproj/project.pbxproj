@@ -280,7 +280,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 20171205.05;
+				CURRENT_PROJECT_VERSION = 20171205.07;
 				DEVELOPMENT_TEAM = H72WEGKB6Z;
 				INFOPLIST_FILE = "iOS-Test/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -299,7 +299,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 20171205.05;
+				CURRENT_PROJECT_VERSION = 20171205.07;
 				DEVELOPMENT_TEAM = H72WEGKB6Z;
 				INFOPLIST_FILE = "iOS-Test/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -312,7 +312,7 @@
 			};
 			name = Release;
 		};
-		18C8276F1FD69B3600AC2762 /* AdHoc */ = {
+		18C8276F1FD69B3600AC2762 /* Adhoc */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -359,15 +359,15 @@
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
-			name = AdHoc;
+			name = Adhoc;
 		};
-		18C827701FD69B3600AC2762 /* AdHoc */ = {
+		18C827701FD69B3600AC2762 /* Adhoc */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 20171205.05;
+				CURRENT_PROJECT_VERSION = 20171205.07;
 				DEVELOPMENT_TEAM = H72WEGKB6Z;
 				INFOPLIST_FILE = "iOS-Test/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -378,7 +378,7 @@
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 			};
-			name = AdHoc;
+			name = Adhoc;
 		};
 /* End XCBuildConfiguration section */
 
@@ -388,7 +388,7 @@
 			buildConfigurations = (
 				183F8E001FD1450300B0D4E4 /* Debug */,
 				183F8E011FD1450300B0D4E4 /* Release */,
-				18C8276F1FD69B3600AC2762 /* AdHoc */,
+				18C8276F1FD69B3600AC2762 /* Adhoc */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -398,7 +398,7 @@
 			buildConfigurations = (
 				183F8E031FD1450300B0D4E4 /* Debug */,
 				183F8E041FD1450300B0D4E4 /* Release */,
-				18C827701FD69B3600AC2762 /* AdHoc */,
+				18C827701FD69B3600AC2762 /* Adhoc */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
