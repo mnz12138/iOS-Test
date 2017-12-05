@@ -59,9 +59,9 @@ output_name:"#{scheme}_#{get_build_number()}",
 
 clean:true,
 
-configuration:"Release",
+configuration:"Adhoc",
 
-export_method:"app-store",
+export_method:"ad-hoc",
 
 output_directory:"./fastlane/build",
 )  
