@@ -61,7 +61,7 @@ clean:true,
 
 configuration:"Release",
 
-export_method:"release",
+export_method:"app-store",
 
 output_directory:"./fastlane/build",
 )  
