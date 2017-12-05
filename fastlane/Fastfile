@@ -61,7 +61,7 @@ clean:true,
 
 configuration:"Release",
 
-export_method:"development",
+export_method:"release",
 
 output_directory:"./fastlane/build",
 )  
