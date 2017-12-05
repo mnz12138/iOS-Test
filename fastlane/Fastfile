@@ -32,7 +32,6 @@ platform :ios do
     sh “export LC_ALL=en_US.UTF-8”
     sh “export LANG=en_US.UTF-8”
     sh "rm -rf " + ENV["PWD"] + "/build"
-    badge(dark: true)
 
     # build
     ipa_path = ENV["PWD"] +"/build"
