@@ -11,64 +11,82 @@
 
 # This is the minimum version number required.
 # Update this, if you use features of a newer version
-fastlane_version "2.68.0"
+fastlane_version "2.67.0"
 
 default_platform :ios
 
-
-def updateProjectBuildNumber
-
-currentTime = Time.new.strftime("%Y%m%d")
-build = get_build_number()
-if build.include?"#{currentTime}."
-
-lastStr = build[build.length-2..build.length-1]
-lastNum = lastStr.to_i
-lastNum = lastNum + 1
-lastStr = lastNum.to_s
-if lastNum < 10
-lastStr = lastStr.insert(0,"0")
-end
-build = "#{currentTime}.#{lastStr}"
-else
-
-build = "#{currentTime}.01"
-end
-puts("*************| Change build #{build} |*************")
-
-increment_build_number(
-build_number: "#{build}"
-)
-end
-
-
-scheme="iOS-Test"
-
 platform :ios do
-  lane :development_build do|options|
-branch = options[:branch]
+  before_all do
+    # ENV["SLACK_URL"] = "https://hooks.slack.com/services/..."
+    # cocoapods
+    # carthage
+  end
 
-puts "start development ipa"
+  desc "Runs all the tests"
+  lane :test do
+    scan
+  end
 
-updateProjectBuildNumber
+  desc "Deploy a new version through jenkins"
+  lane :jenkins do
 
+    sh "rm -rf " + ENV["PWD"] + "/build"
 
-gym(
+    badge(dark: true)
 
-output_name:"#{scheme}_#{get_build_number()}",
+    # build
+    ipa_path = ENV["PWD"] +"/build"
+    ipa_name = "iOS-Test-Debug.ipa"
 
-clean:true,
+    gym(
+        configuration:"Debug",
+        scheme:"iOS-Test",
+        export_method:"development",
+        clean:true,
+        output_directory:ipa_path,
+        output_name:ipa_name
+    )
 
-configuration:"Debug",
+    sh "git checkout "+ ENV["PWD"] +"/iOS-Test/Assets.xcassets/ " 
+    sh "fir p /Users/dfssit/.jenkins/jobs/iOS-Test/workspace/build/iOS-Test-Debug.ipa -T a2833eac188cef62a073cd9be4e14261"
+  end
 
-export_method:"development",
+  desc "Submit a new Beta Build to Apple TestFlight"
+  desc "This will also make sure the profile is up to date"
+  lane :beta do
+    # match(type: "appstore") # more information: https://codesigning.guide
+    gym(scheme: "iOS-Test") # Build your app - more options available
+    pilot
 
-output_directory:"./fastlane/build",
-)  
+    # sh "your_script.sh"
+    # You can also use other beta testing services here (run `fastlane actions`)
+  end
 
-sh "fir publish ./build/#{scheme}_#{get_build_number()}.ipa -T 59992c566b27ce19c9a63d2680c23880"
+  desc "Deploy a new version to the App Store"
+  lane :release do
+    # match(type: "appstore")
+    # snapshot
+    gym(scheme: "iOS-Test") # Build your app - more options available
+    deliver(force: true)
+    # frameit
+  end
 
-end
+  # You can define as many lanes as you want
+
+  after_all do |lane|
+    # This block is called, only if the executed lane was successful
+
+    # slack(
+    #   message: "Successfully deployed new App Update."
+    # )
+  end
+
+  error do |lane, exception|
+    # slack(
+    #   message: exception.message,
+    #   success: false
+    # )
+  end
 end
 
 
