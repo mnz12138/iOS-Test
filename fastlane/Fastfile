@@ -59,7 +59,7 @@ output_name:"#{scheme}_#{get_build_number()}",
 
 clean:true,
 
-configuration:"Debug",
+configuration:"Release",
 
 export_method:"development",
 
