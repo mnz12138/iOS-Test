@@ -5,39 +5,47 @@
     
     
       
-      <testcase classname="fastlane.lanes" name="0: Verifying required fastlane version" time="0.005312">
+      <testcase classname="fastlane.lanes" name="0: Verifying required fastlane version" time="0.02489">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="1: default_platform" time="0.001886">
+      <testcase classname="fastlane.lanes" name="1: default_platform" time="0.002431">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="2: rm -rf /Users/dfssit/Desktop/temp/iOS-Test/build" time="0.004568">
+      <testcase classname="fastlane.lanes" name="2: export LC_ALL=en_US.UTF-8" time="0.012954">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="3: badge" time="0.135919">
+      <testcase classname="fastlane.lanes" name="3: export LANG=en_US.UTF-8" time="0.005553">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="4: gym" time="22.920756">
+      <testcase classname="fastlane.lanes" name="4: rm -rf /Users/dfssit/Desktop/temp/iOS-Test/build" time="0.011172">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="5: git checkout /Users/dfssit/Desktop/temp/iOS-Test/iOS-Test/Assets.xcassets/ " time="0.022307">
+      <testcase classname="fastlane.lanes" name="5: badge" time="0.298749">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="6: fir p /Users/dfssit/.jenkins/jobs/iOS-Test/workspace/build/iOS-Test-Debug.ipa -T a2833eac188cef62a073cd9be4e14261" time="1.251564">
+      <testcase classname="fastlane.lanes" name="6: gym" time="28.084016">
         
-          <failure message="/Users/dfssit/.rvm/gems/ruby-2.4.0-rc1@global/gems/fastlane-2.67.0/fastlane/lib/fastlane/actions/actions_helper.rb:48:in `execute_action'&#10;/Users/dfssit/.rvm/gems/ruby-2.4.0-rc1@global/gems/fastlane-2.67.0/fastlane/lib/fastlane/fast_file.rb:179:in `sh'&#10;Fastfile:51:in `block (2 levels) in parsing_binding'&#10;/Users/dfssit/.rvm/gems/ruby-2.4.0-rc1@global/gems/fastlane-2.67.0/fastlane/lib/fastlane/lane.rb:33:in `call'&#10;/Users/dfssit/.rvm/gems/ruby-2.4.0-rc1@global/gems/fastlane-2.67.0/fastlane/lib/fastlane/runner.rb:49:in `block in execute'&#10;/Users/dfssit/.rvm/gems/ruby-2.4.0-rc1@global/gems/fastlane-2.67.0/fastlane/lib/fastlane/runner.rb:45:in `chdir'&#10;/Users/dfssit/.rvm/gems/ruby-2.4.0-rc1@global/gems/fastlane-2.67.0/fastlane/lib/fastlane/runner.rb:45:in `execute'&#10;/Users/dfssit/.rvm/gems/ruby-2.4.0-rc1@global/gems/fastlane-2.67.0/fastlane/lib/fastlane/lane_manager.rb:54:in `cruise_lane'&#10;/Users/dfssit/.rvm/gems/ruby-2.4.0-rc1@global/gems/fastlane-2.67.0/fastlane/lib/fastlane/command_line_handler.rb:30:in `handle'&#10;/Users/dfssit/.rvm/gems/ruby-2.4.0-rc1@global/gems/fastlane-2.67.0/fastlane/lib/fastlane/commands_generator.rb:104:in `block (2 levels) in run'&#10;/Users/dfssit/.rvm/gems/ruby-2.4.0-rc1@global/gems/commander-fastlane-4.4.5/lib/commander/command.rb:178:in `call'&#10;/Users/dfssit/.rvm/gems/ruby-2.4.0-rc1@global/gems/commander-fastlane-4.4.5/lib/commander/command.rb:153:in `run'&#10;/Users/dfssit/.rvm/gems/ruby-2.4.0-rc1@global/gems/commander-fastlane-4.4.5/lib/commander/runner.rb:476:in `run_active_command'&#10;/Users/dfssit/.rvm/gems/ruby-2.4.0-rc1@global/gems/fastlane-2.67.0/fastlane_core/lib/fastlane_core/ui/fastlane_runner.rb:66:in `run!'&#10;/Users/dfssit/.rvm/gems/ruby-2.4.0-rc1@global/gems/commander-fastlane-4.4.5/lib/commander/delegates.rb:15:in `run!'&#10;/Users/dfssit/.rvm/gems/ruby-2.4.0-rc1@global/gems/fastlane-2.67.0/fastlane/lib/fastlane/commands_generator.rb:303:in `run'&#10;/Users/dfssit/.rvm/gems/ruby-2.4.0-rc1@global/gems/fastlane-2.67.0/fastlane/lib/fastlane/commands_generator.rb:42:in `start'&#10;/Users/dfssit/.rvm/gems/ruby-2.4.0-rc1@global/gems/fastlane-2.67.0/fastlane/lib/fastlane/cli_tools_distributor.rb:75:in `take_off'&#10;/Users/dfssit/.rvm/gems/ruby-2.4.0-rc1@global/gems/fastlane-2.67.0/bin/fastlane:20:in `&lt;top (required)&gt;'&#10;/Users/dfssit/.rvm/rubies/ruby-2.4.0-rc1/bin/fastlane:23:in `load'&#10;/Users/dfssit/.rvm/rubies/ruby-2.4.0-rc1/bin/fastlane:23:in `&lt;main&gt;'&#10;/Users/dfssit/.rvm/gems/ruby-2.4.0-rc1/bin/ruby_executable_hooks:15:in `eval'&#10;/Users/dfssit/.rvm/gems/ruby-2.4.0-rc1/bin/ruby_executable_hooks:15:in `&lt;main&gt;'&#10;&#10;Exit status of command 'fir p /Users/dfssit/.jenkins/jobs/iOS-Test/workspace/build/iOS-Test-Debug.ipa -T a2833eac188cef62a073cd9be4e14261' was 1 instead of 0.&#10;E, [2017-12-05T09:58:36.908629 #7740] ERROR -- : File does not exist&#10;" />
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="7: git checkout /Users/dfssit/Desktop/temp/iOS-Test/iOS-Test/Assets.xcassets/ " time="0.022954">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="8: fir p /Users/dfssit/.jenkins/jobs/iOS-Test/workspace/build/iOS-Test-Debug.ipa -T a2833eac188cef62a073cd9be4e14261" time="7.155191">
         
       </testcase>
     
